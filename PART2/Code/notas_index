@@ -1,0 +1,19 @@
+-- For Query 1
+Use index on person to find
+person.name = 'John Smith' as pvet;
+Use index on consult to find
+consult.VAT_vet = pvet.VAT;
+Use index on animal to find
+animal.VAT = consult.VAT_owner and animal.name = consult.name
+to test animal.VAT = person.VAT;
+
+These indexes would ease the computational effort in case of a highly populated database, since the main computational expense in this query coincides
+with the search on the animal, person and consult tables. 
+
+
+
+
+-- For Query 2
+Use index on units to find
+units LIKE '%mg%'; test for reference_value > 100 and order by descent
+An index on units was chosen to make it computationally easier to find units like %mg%, since the main computational expense in this query is finding strings like %mg%
