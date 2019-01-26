@@ -1,7 +1,7 @@
 <?php
 	$host="db.tecnico.ulisboa.pt";;
 	$user="ist*******";
-	$pass="syhs*****";
+	$pass="*****";
 	$dsn = "mysql:host=$host;dbname=$user";
 	try
 	{
